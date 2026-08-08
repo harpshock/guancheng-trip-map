@@ -475,7 +475,7 @@ function amapAppUrl(name, lat, lng) {
 function amapWebUrl(name, lat, lng) {
   return `https://uri.amap.com/marker?position=${lng},${lat}&name=${encodeURIComponent(name)}&src=trip&coordinate=wgs84&callnative=1`;
 }
-function openAmap(name, lat, lng) {
+function openAmap(name, lat, lng) {+ '<button class="as-item" onclick="window.open(\'https://api.map.baidu.com/marker?location='+lat+','+lng+'&title='+encName+'&output=html\');closeAS()">🗺️ 百度地图</button>'
   if (IN_APP_WEBVIEW) { window.open(amapWebUrl(name, lat, lng)); return; }
   window.location.href = amapAppUrl(name, lat, lng);
 }
