@@ -492,7 +492,8 @@ function openAS(name, lat, lng, gmap) {
   document.getElementById('as-opts').innerHTML =
     `<button class="as-item" onclick="window.open('${appleUrl}');closeAS()">🍎 Apple Maps</button>` +
     `<button class="as-item" onclick="window.open('${googleUrl}');closeAS()">🗺️ Google Maps</button>` +
-    `<button class="as-item" onclick="openAmap('${safeName}',${lat},${lng});closeAS()">🧭 高德地图 App</button>`;
+    `<button class="as-item" onclick="openAmap('${safeName}',${lat},${lng});closeAS()">🧭 高德地图 App</button> +
+    `<button class="as-item" onclick="window.open('https://api.map.baidu.com/marker?location='+lat+','+lng+'&title='+encName+'&output=html');closeAS()">🗺️ 百度地图</button>``;
   asOverlay.classList.add('show');
 }
 function closeAS() { asOverlay.classList.remove('show'); }
