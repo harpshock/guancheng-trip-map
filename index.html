@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>莞城老街 一上午+午饭</title>
-<meta name="description" content="8:00可园开启,骑楼扫街,旨亭街排骨饭,CHENCHEN咖啡,权记烧鹅王收尾">
+<title>香港两天 · 雨天版</title>
+<meta name="description" content="香港两天行程：中环·太平山顶·西九M+·旺角，罗湖返程">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/leaflet/1.9.4/leaflet.css" />
@@ -237,39 +237,44 @@ a:hover { text-decoration: underline; }
 // ║  REPLACE THIS SECTION — Hotel and Days data                 ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const HOTEL = { name: "莞城·可园", lat: 23.044366, lng: 113.738499 };
+const HOTEL = { name: '旺角酒店（自订）', lat: 22.3190, lng: 114.1700 };
 
 const DAYS = [
   { id: 0, label: '总览', color: '#0071e3', locations: [] },
-  { id: 1, label: '8:00-11:30', date: '2026年8月8日 周六', title: '莞城老巷扫街 + 两顿饭 + 咖啡', color: '#ff9500', locations: [
-    { name: '可园博物馆', lat: 23.045313, lng: 113.743003, type: 'spot', time: '8:00', desc: '岭南四大名园之一,门票8元,散客无需预约;亭台楼阁假山池塘,清晨穿汉服拍古风大片', budget: '￥8 门票', detail: '开放时间 7:00-17:30\n周二闭馆(今天周六,正常开放)\n散客无需预约,团队需要\n建议游览 40-45 分钟', gmap: '东莞可园博物馆' },
-    { name: '振华路骑楼群', lat: 23.047212, lng: 113.745605, type: 'spot', time: '8:50', desc: '莞城老商圈核心,规模较大的骑楼建筑群;港风胶片拍照超赞。注意部分路段在修缮', detail: '从可园步行约8分钟到达\n本路段存在部分道路施工,但不影响老巷子游玩\n藏在街巷里的老字号:钟表店 照相馆 振华饼家鸡仔饼', gmap: '东莞莞城振华路' },
-    { name: '旨亭街排骨饭', lat: 23.047912, lng: 113.747306, type: 'food', time: '9:30', desc: '第一顿饭:米饭入味 上菜快 人均低;评论说牛腩饭比排骨饭还好吃,都点一份试试。早上6点就营业,9点半到刚好避开高峰', budget: '￥20-30', detail: '莞城十几年老店,早上6点就有营业\n排骨香,米饭入味,牛腩饭也被力推\n吃完就走,不占走街时间\n营业到下午,不用担心关门', pay: { cash: 1, alipay: 1, wechat: 1 }, gmap: '东莞莞城旨亭街排骨饭' },
-    { name: '中山路 万寿路老巷', lat: 23.048512, lng: 113.748306, type: 'spot', time: '10:00', desc: '真正的莞城记忆在这里——中山路骑楼 万寿路/县正路老房子,白夜追凶取景地,转角可能偶遇有意思的小店', detail: '小红书博主多次打卡的热门路段\n万寿路/县正路多了很多有意思又有趣的小店\n可以留意转角的小咖啡馆 文创杂货铺\n建议逛30分钟后打车去东城星河城', gmap: '东莞万寿路莞城' },
-    { name: 'CHENCHEN咖啡', lat: 23.034732, lng: 113.772837, type: 'drink', time: '10:40', desc: '小红书咖啡测评力荐:拼配美式最好喝,回味无穷;布丁好吃,可见大量香草黑点。东城星河城附近', detail: '打车从莞城到东城星河城约10分钟\n东方城星河城商圈旁:关东城路\n拼配美式必点,布丁也推荐\n特调有姜的烈,猎奇可以试试\n营业时间约10:00-22:00', pay: { alipay: 1, wechat: 1 }, gmap: '东莞东城CHENCHEN咖啡星河城' },
-    { name: '打车到权记', lat: 23.036729, lng: 113.770333, type: 'transport', time: '11:10', desc: '从东城星河城打车到石井路权记烧鹅王,约5分钟', detail: '星河城出发,约5分钟车程\n权记和附近几家名字相似的店要区分\n杞兴往前走就见到权记', gmap: '东莞东城石井路' },
-    { name: '权记烧鹅王', lat: 23.037726, lng: 113.767829, type: 'food', time: '11:20', desc: '第二顿饭:小红书19点赞力荐荔枝柴烧鹅皮脆肉嫩,人均30-40元', budget: '￥30-40', detail: '东城石井路(杞兴往前走就见到)\n建议 11:15-11:30 到,避开高峰\n烧鹅濑粉必点,也可以加烧鹅腿\n注意和附近几家名字相似的店区分,别走错', pay: { cash: 1, alipay: 1, wechat: 1 }, gmap: '东莞东城权记烧鹅王' }
-  ]}
+  { id: 1, label: 'Day 1', date: '周六 8/22 · 雨小', title: '中环·山顶·西九·旺角', color: '#ff9500', locations: [{"name": "金管局资讯中心", "lat": 22.285042, "lng": 114.157274, "type": "spot", "time": "11:00", "desc": "免费观展 + 55楼维港景（室内避雨）", "detail": "香港站A2出口→IFC2期55楼。周六10:00–13:00、12:40停止入场；带身份证件登记；10人以下免预约。", "gmap": "金管局资讯中心+香港"}, {"name": "文武庙", "lat": 22.283871, "lng": 114.150158, "type": "spot", "time": "12:15", "desc": "免费，上环百年文武庙，求好运", "detail": "上环站A2步行约10分钟；8:00–18:00；庙小，30分钟够。", "gmap": "文武庙+香港"}, {"name": "九记牛腩", "lat": 22.284229, "lng": 114.152537, "type": "food", "time": "12:45", "desc": "清汤/咖喱牛腩名店，上汤牛爽腩", "budget": "约HK$60–120", "detail": "歌赋街21号，近文武庙；周六开、周日休；排队久可改蘭芳園（丝袜奶茶+猪扒包）。", "pay": {"cash": 1, "card": 0.5}, "xhsKeyword": "九记牛腩 香港", "dianpingKeyword": "九记牛腩", "gmap": "九记牛腩+香港"}, {"name": "15路公交上山顶", "lat": 22.2854, "lng": 114.1582, "type": "transport", "time": "14:00", "desc": "中环交易广场/码头乘15路巴士→太平山顶（约35–40分钟）", "detail": "备选：金钟站乘X15直达山顶。", "pay": {"cash": 1}, "gmap": "15路公交上山顶+香港"}, {"name": "太平山顶·凌霄阁", "lat": 22.27134, "lng": 114.14957, "type": "spot", "time": "14:40", "desc": "山顶逗留约1小时；雨小，山顶广场/摩天台428", "detail": "摩天台428 8:30–22:00；黄雨照常开放，雾大时山顶广场室内躲雨。", "pay": {"card": 1, "alipay": 1, "wechat": 1}, "gmap": "太平山顶·凌霄阁+香港"}, {"name": "山顶缆车下山", "lat": 22.2808, "lng": 114.1588, "type": "transport", "time": "15:40", "desc": "花园道缆车下山约10分钟（含排队30–60分钟缓冲）", "detail": "周六傍晚排队常见30–60分钟；约16:20回到中环。", "gmap": "山顶缆车下山+香港"}, {"name": "尖沙咀晚餐（M+前）", "lat": 22.298276, "lng": 114.17361, "type": "food", "time": "17:00", "desc": "拉面来（加拿分道25-31号地下8铺）→ 饭后花斑茶社奶茶（乐道32-34）", "detail": "晚餐在进M+之前解决；饭后沿海滨/地铁到西九看日落。备选：龙凤呈祥鸡煲（尖沙咀加拿芬道16号）。", "pay": {"card": 1, "alipay": 1, "wechat": 1, "cash": 1}, "xhsKeyword": "拉面来 尖沙咀", "dianpingKeyword": "拉面来 尖沙咀", "gmap": "尖沙咀晚餐（M+前）+香港"}, {"name": "西九艺术公园·日落", "lat": 22.3, "lng": 114.157, "type": "spot", "time": "18:30", "desc": "免费，维港海滨日落机位（8月日落约18:45）", "detail": "艺术公园6:00–23:00开放；M+旁，日落前可沿海滨慢慢走。", "gmap": "西九艺术公园·日落+香港"}, {"name": "M+博物馆", "lat": 22.301054, "lng": 114.159147, "type": "spot", "time": "19:00", "desc": "亚洲当代视觉文化博物馆（周六开到20:00）", "detail": "周六开放至20:00（平日18:00关、周五22:00、周一休）；建议官网提前购票/预约。", "pay": {"card": 1, "alipay": 1, "wechat": 1}, "xhsKeyword": "M+博物馆 香港", "reserve": "https://www.mplus.org.hk/tc/ticketing/", "gmap": "M+博物馆+香港"}, {"name": "旺角酒店（入住）", "lat": 22.319, "lng": 114.17, "type": "hotel", "time": "20:30", "desc": "夜宿旺角（弥敦道/星际城市附近自订）", "detail": "建议订近旺角站/星际城市，方便Day 2顺星。", "gmap": "旺角酒店（入住）+香港"}, {"name": "十八楼鸡煲", "lat": 22.3201, "lng": 114.1692, "type": "food", "time": "21:00", "desc": "鸡煲火锅专门店，吃完加汤涮火锅（雨天治愈）", "budget": "约HK$250–350/人", "detail": "弥敦道593-601号创兴广场18楼；周末可先订位。", "pay": {"card": 1, "alipay": 1, "wechat": 1, "cash": 1}, "xhsKeyword": "18楼鸡煲 旺角", "dianpingKeyword": "18楼鸡煲火锅", "gmap": "十八楼鸡煲+香港"}, {"name": "聪嫂甜品", "lat": 22.316729, "lng": 114.171564, "type": "food", "time": "—", "desc": "龙眼冰/杨枝甘露（备选）", "detail": "豉油街50号富达大厦地下8铺，开至24:00。", "pay": {"cash": 1, "card": 0.5, "alipay": 0.5, "wechat": 0.5}, "xhsKeyword": "聪嫂甜品 旺角", "gmap": "聪嫂甜品+香港"}, {"name": "嘉多娜布甸包", "lat": 22.3175, "lng": 114.1705, "type": "food", "time": "—", "desc": "法式布甸包，铁观音味（备选）", "detail": "西洋菜南街146号地铺。", "pay": {"cash": 1, "alipay": 1}, "gmap": "嘉多娜布甸包+香港"}, {"name": "序言书室（楼上书店）", "lat": 22.318, "lng": 114.1708, "type": "spot", "time": "—", "desc": "独立书店，12:00–22:00（备选）", "detail": "西洋菜南街68号7楼；樂文書店62号3楼、榆林書店59号3楼在同街。", "pay": {"cash": 1, "card": 1}, "gmap": "序言书室（楼上书店）+香港"}] },
+  { id: 2, label: 'Day 2', date: '周日 8/23 · 罗湖返程', title: '旺角·油麻地·收尾', color: '#34c759', locations: [{"name": "金华冰厅（早餐）", "lat": 22.322299, "lng": 114.16975, "type": "food", "time": "8:30", "desc": "菠萝油+蛋挞+奶茶，6:30就开", "detail": "弼街47号（近太子/旺角）。", "pay": {"cash": 1, "card": 0.5, "alipay": 1, "wechat": 1}, "xhsKeyword": "金华冰厅", "dianpingKeyword": "金华冰厅", "gmap": "金华冰厅（早餐）+香港"}, {"name": "花墟道+雀鸟花园", "lat": 22.3256, "lng": 114.1724, "type": "spot", "time": "9:30", "desc": "本地晨间散步：花墟 + 园圃街雀鸟花园，7:00开", "detail": "太子站B1出口；免费，逛到10:45出发去顺星。", "gmap": "花墟道+雀鸟花园+香港"}, {"name": "顺星数码", "lat": 22.317624, "lng": 114.170144, "type": "spot", "time": "11:00", "desc": "相机/器材店，11:00开门，排队约2小时", "detail": "旺角站E2出口→星际城市302铺（总店）/113铺（分店）。", "pay": {"cash": 1, "card": 1}, "gmap": "顺星数码+香港"}, {"name": "权发小厨", "lat": 22.312513, "lng": 114.170576, "type": "food", "time": "13:15", "desc": "本地家常菜（弥敦道513号地下）", "pay": {"cash": 1, "card": 0.5}, "xhsKeyword": "权发小厨", "dianpingKeyword": "权发小厨", "gmap": "权发小厨+香港"}, {"name": "和顺记", "lat": 22.313398, "lng": 114.168137, "type": "food", "time": "—", "desc": "甜品/小吃（碧街24号地铺，备选）", "pay": {"cash": 1}, "gmap": "和顺记+香港"}, {"name": "Kubrick书店", "lat": 22.310004, "lng": 114.168823, "type": "spot", "time": "14:15", "desc": "电影/艺术书店+咖啡，百老汇电影中心旁", "detail": "众坊街3号骏发花园H2；油麻地站C出口。", "pay": {"card": 1, "cash": 1, "alipay": 0.5}, "xhsKeyword": "Kubrick 油麻地", "gmap": "Kubrick书店+香港"}, {"name": "庙街", "lat": 22.30423, "lng": 114.169693, "type": "spot", "time": "15:00", "desc": "市井老街，白天安静（可顺路）", "gmap": "庙街+香港"}, {"name": "旺角早晚饭", "lat": 22.3193, "lng": 114.1686, "type": "food", "time": "16:00", "desc": "返程前晚饭：烧腊/茶餐厅，17:00前吃完", "detail": "就近选：金华冰厅晚餐/烧味店/翠华；吃完前往旺角东站。", "pay": {"cash": 1, "alipay": 1, "wechat": 1}, "gmap": "旺角早晚饭+香港"}, {"name": "旺角东站", "lat": 22.322258, "lng": 114.172115, "type": "transport", "time": "17:10", "desc": "东铁线→罗湖（约40分钟）", "detail": "从旺角打车约10分钟/步行约20分钟；17:10前到站，18:15前到罗湖。", "gmap": "旺角东站+香港"}, {"name": "罗湖口岸（返程）", "lat": 22.529713, "lng": 114.11385, "type": "transport", "time": "18:00", "desc": "过关返程，最晚18:15到", "detail": "东铁线直达罗湖站；过关后接深圳地铁1号线。", "gmap": "罗湖口岸（返程）+香港"}] }
 ];
+
+// ╔══════════════════════════════════════════════════════════════╗
+// ║  REPLACE THIS SECTION — Overview tab content                ║
+// ╚══════════════════════════════════════════════════════════════╝
+
 function overviewContent() {
-  return '<div class="hero"><h1>莞城老街</h1><p class="subtitle">一上午 + 两顿饭 + 咖啡 · 老巷骑楼扫街</p></div>' +
-    '<div class="info-grid">' +
-    '<div class="info-card"><div class="label">日期</div><div class="value">2026年8月8日 周六</div></div>' +
-    '<div class="info-card"><div class="label">天气</div><div class="value">32-34度,午后或有短时阵雨,带伞</div></div>' +
-    '<div class="info-card"><div class="label">节奏</div><div class="value">步行+打车短驳,约5km</div></div>' +
-    '<div class="info-card"><div class="label">预估费用</div><div class="value">可园8元 + 两顿饭50-70 + 咖啡25 + 打车30 = 约120</div></div>' +
-    '</div>' +
-    '<div class="section-head">行程概览</div>' +
-    '<div class="day-list">' + DAYS.slice(1).map(function(d) { return '<div class="card" onclick="go(' + d.id + ')"><div class="name"><span class="dot" style="background:' + d.color + '"></span>' + d.label + ' . ' + d.title + '</div><div class="desc">' + d.date + '</div></div>'; }).join('') + '</div>' +
-    '<div class="section-head">路线逻辑</div>' +
-    '<div class="pay-summary"><h4>为什么这么排</h4><p>可园8:00开门就进,清晨人少光线好不热,45分钟刚好<br>9:30吃第一顿饭,旨亭街排骨饭早上6点就营业<br>10:00老巷扫街,中山路万寿路转一圈,约30分钟<br>10:40从莞城打车到东城星河城CHENCHEN,喝杯拼配美式+布丁<br>11:10从CHENCHEN打车5分钟到权记烧鹅王,赶在中午大排队前进店</p></div>' +
-    '<div class="section-head">支付提醒</div>' +
-    '<div class="pay-summary"><h4>支付方式</h4><p><span class="ok-text">所有店</span> 都支持 <b>微信支付 / 支付宝</b><br><span class="warn">权记烧鹅王是社区老店,建议也带一点现金备用</span></p></div>' +
-    '<div class="section-head">备选调整</div>' +
-    '<div class="pay-summary"><h4>如果累了 / 下雨了</h4><p>· 振华路现在部分区域在修路,优先走<b>中山路 万寿路</b>那一段没动工的<br>· 也可以跳过CHENCHEN直接去权记,老巷多逛15分钟<br>· 排骨饭分量小,如果吃完还想逛一会,10:30再打车去CHENCHEN也来得及</p></div>' +
-    '<div class="section-head">图例</div>' +
-    '<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:var(--tint-red)"></div>餐厅</div><div class="legend-item"><div class="legend-dot" style="background:var(--tint-blue)"></div>景点</div><div class="legend-item"><div class="legend-dot" style="background:var(--tint-purple)"></div>咖啡饮品</div><div class="legend-item"><div class="legend-dot" style="background:var(--text-tertiary)"></div>交通</div></div>';
+  return `
+<div class="hero"><h1>香港两天 · 雨天版</h1><p class="subtitle">8/22–8/23 中环 · 太平山顶 · 西九 M+ · 旺角 · 罗湖返程（无自助餐）</p></div>
+<div class="info-grid">
+  <div class="info-card"><div class="label">酒店</div><div class="value">旺角（弥敦道/星际城市附近自订）</div></div>
+  <div class="info-card"><div class="label">往返</div><div class="value">Day2 东铁线→罗湖口岸，最晚18:15</div></div>
+  <div class="info-card"><div class="label">交通卡</div><div class="value">八达通 / 支付宝乘车码 / 现金</div></div>
+  <div class="info-card"><div class="label">预估费用</div><div class="value">约HK$1,300–1,800（不含购物）</div></div>
+</div>
+<div class="section-head">行程概览</div>
+<div class="day-list">${DAYS.slice(1).map(d=>`<div class="card" onclick="go(${d.id})"><div class="name"><span class="dot" style="background:${d.color}"></span>${d.label} · ${d.title}</div><div class="desc">${d.date}</div></div>`).join('')}</div>
+<div class="section-head">支付提醒</div>
+<div class="pay-summary"><h4>💴 现金</h4>九记牛腩、权发小厨、部分老店/街边档只收现金，<span class="warn">备 500 HKD</span>。</div>
+<div class="pay-summary"><h4>📱 扫码</h4>连锁餐厅、商场、M+ 通用支付宝/微信；独立小店不一定。</div>
+<div class="pay-summary"><h4>🚇 交通</h4>山顶缆车/天星小轮/东铁线可用八达通；港铁支持支付宝乘车码。</div>
+<div class="pay-summary"><h4>⚠️ 硬时间</h4><span class="warn">金管局周六12:40停入</span>；<span class="warn">M+ 周六20:00关</span>；<span class="warn">罗湖18:15前到</span>。</div>
+<div class="section-head">图例</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--tint-red)"></div>餐厅</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--tint-blue)"></div>景点</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--tint-orange)"></div>酒店</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--tint-green)"></div>交通</div>
+</div>`;
 }
+
+// ╔══════════════════════════════════════════════════════════════╗
 // ║  ENGINE — Do not modify below unless customizing behavior   ║
 // ╚══════════════════════════════════════════════════════════════╝
 
@@ -492,8 +497,7 @@ function openAS(name, lat, lng, gmap) {
   document.getElementById('as-opts').innerHTML =
     `<button class="as-item" onclick="window.open('${appleUrl}');closeAS()">🍎 Apple Maps</button>` +
     `<button class="as-item" onclick="window.open('${googleUrl}');closeAS()">🗺️ Google Maps</button>` +
-    `<button class="as-item" onclick="openAmap('${safeName}',${lat},${lng});closeAS()">🧭 高德地图 App</button>` +
-    `<button class="as-item" onclick="window.open('https://api.map.baidu.com/marker?location=${lat},${lng}&title=${encName}&output=html');closeAS()">🗺️ 百度地图</button>`;
+    `<button class="as-item" onclick="openAmap('${safeName}',${lat},${lng});closeAS()">🧭 高德地图 App</button>`;
   asOverlay.classList.add('show');
 }
 function closeAS() { asOverlay.classList.remove('show'); }
